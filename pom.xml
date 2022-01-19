@@ -10,7 +10,7 @@
 
     <modules>
         <module>common</module>
-        <module>detail</module>
+        <module>details</module>
         <module>discovery</module>
         <module>gateway</module>
         <module>search</module>

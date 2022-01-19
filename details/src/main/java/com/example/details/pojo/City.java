@@ -1,4 +1,4 @@
-package com.example.search.pojo;
+package com.example.details.pojo;
 
 import lombok.Data;
 

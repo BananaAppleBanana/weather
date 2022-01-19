@@ -1,10 +1,9 @@
-package com.example.detail;
+package com.example.details;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DetailApplicationTests {
-
+class DetailsApplicationTests {
 
 
 }
