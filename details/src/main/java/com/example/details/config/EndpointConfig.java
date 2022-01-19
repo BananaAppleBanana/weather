@@ -1,4 +1,4 @@
-package com.example.search.config;
+package com.example.details.config;
 
 public class EndpointConfig {
     public static final String queryWeatherByCity = "https://www.metaweather.com/api/location/search/?query=";
