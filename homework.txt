@@ -1,0 +1,12 @@
+gateway -> search -> details
+1. user can send multiple city names and your response should return different cities' weather
+2. you should use multithreading if you need to send multi-requests at same time
+3. current project doesn't have any log and cannot track request id(uuid)
+4. current project doesn't have any api documents(swagger)
+5. current project doesn't have any exception handling
+
+
+* no fail tolerance if other services couldn't respond(retry / circuit breaker(hystrix))
+* add security service
+* add configuration service
+* add cache

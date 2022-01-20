@@ -25,18 +25,18 @@ public class WeatherController {
         this.weatherService = weatherService;
     }
 
-    @GetMapping("/weather")
+    @GetMapping("/details")
     public ResponseEntity<?> queryWeatherByCity(@RequestParam(required = true) String city) {
         return new ResponseEntity<>(weatherService.findCityIdByName(city), HttpStatus.OK);
     }
 
 
-    @GetMapping("/weather/{id}")
+    @GetMapping("/details/{id}")
     public ResponseEntity<?> queryWeatherByCity(@PathVariable int id) {
         return new ResponseEntity<Map>(weatherService.findCityNameById(id), HttpStatus.OK);
     }
 
-    @GetMapping("/weather/port")
+    @GetMapping("/details/port")
     public ResponseEntity<?> queryWeatherByCity() {
         return new ResponseEntity<>("weather service + " + randomServerPort, HttpStatus.OK);
     }

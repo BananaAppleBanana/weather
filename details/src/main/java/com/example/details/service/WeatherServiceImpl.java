@@ -37,6 +37,7 @@ public class WeatherServiceImpl implements WeatherService{
     }
 
     @Override
+    //change findcitynamebyid => find weather details by id
     public Map<String, Map> findCityNameById(int id) {
         Map<String, Map> ans = restTemplate.getForObject(EndpointConfig.queryWeatherById + id, HashMap.class);
         return ans;

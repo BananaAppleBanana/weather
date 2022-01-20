@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SearchController {
 
-    @GetMapping("/search")
+    @GetMapping("/weather/search")
     public ResponseEntity<?> getDetails() {
         //TODO
         return null;

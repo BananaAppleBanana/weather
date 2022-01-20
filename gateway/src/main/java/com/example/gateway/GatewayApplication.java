@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
+//zuul vs spring cloud gateway
 @EnableEurekaClient
 @SpringBootApplication
 public class GatewayApplication {
