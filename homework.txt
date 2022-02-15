@@ -8,6 +8,10 @@ gateway -> search -> details
     CompletableFuture + webclient / RestTemplate
     give response
 3. current project doesn't have any log and cannot track request id(uuid)
+    add filter in diff service
+        get co-relation id from header
+        put co-relation id in thread local
+        clean up thread local id before give response
 4. current project doesn't have any api documents(swagger)
 5. current project doesn't have any exception handling
 
