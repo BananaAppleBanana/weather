@@ -1,6 +1,12 @@
 gateway -> search -> details
-1. user can send multiple city names and your response should return different cities' weather
+1. user can send multiple city names to search service and your response should return different cities' weather
 2. you should use multithreading if you need to send multi-requests at same time
+/search?cities=chi:
+    chicago + ashburn
+    /location/id1
+    /location/id2
+    CompletableFuture + webclient / RestTemplate
+    give response
 3. current project doesn't have any log and cannot track request id(uuid)
 4. current project doesn't have any api documents(swagger)
 5. current project doesn't have any exception handling
@@ -9,4 +15,3 @@ gateway -> search -> details
 * no fail tolerance if other services couldn't respond(retry / circuit breaker(hystrix))
 * add security service
 * add configuration service
-* add cache

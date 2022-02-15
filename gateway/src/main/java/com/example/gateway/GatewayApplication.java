@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
 //zuul vs spring cloud gateway
+//ribbon
 @EnableEurekaClient
 @SpringBootApplication
 public class GatewayApplication {
