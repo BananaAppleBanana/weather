@@ -1,19 +1,19 @@
-gateway -> search -> details
-1. user can send multiple city names to search service and your response should return different cities' weather
-2. you should use multithreading if you need to send multi-requests at same time
-/search?cities=chi:
-    chicago + ashburn
-    /location/id1
-    /location/id2
-    CompletableFuture + webclient / RestTemplate
-    give response
-3. current project doesn't have any log and cannot track request id(uuid)
-    add filter in diff service
+1. change gateway setting
+   change search service setting and use rest template with spring application name
+    from  gateway -> search
+                   -> details
+    to    gateway -> search -> details
+2. user can send multiple city names to search service and your response should return different cities' weather
+    /search?cities=chi,ashburn,x2,x3
+3. you should use multithreading if you need to send multi-requests at same time
+    CompletableFuture + WebClient / RestTemplate
+4. current project doesn't have any log and cannot track request id(uuid)
+    add filter in diff services
         get co-relation id from header
         put co-relation id in thread local
         clean up thread local id before give response
-4. current project doesn't have any api documents(swagger)
-5. current project doesn't have any exception handling
+5. current project doesn't have any api documents(swagger)
+6. current project doesn't have any exception handling
 
 
 * no fail tolerance if other services couldn't respond(retry / circuit breaker(hystrix))
