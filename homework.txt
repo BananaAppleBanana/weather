@@ -4,6 +4,21 @@
              /
           employee
 
-
+Wednesday
 1. register your services into microservice
 2. search service fetch data from employee service
+
+Thursday
+1. impl endpoint in employee service => retrieve employee by id
+2. in search service, create endpoint to retrieve multiple employees at same time with multi-threading
+    (CompletableFuture)
+3. add swagger library in .. services
+
+Friday / Weekends
+1. add hystrix + retry in search service
+2. add configuration service in microservice
+3. add security verification into your microservice with spring cloud security
+   gateway -> security
+     |
+   resource(@PreAuthorize , filter / controller , service -> fetch principle / user authentication by using jwt token)
+
