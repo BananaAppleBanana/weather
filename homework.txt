@@ -1,24 +1,29 @@
                             gateway
-[eureka]       /        /           \       \
-            search      details     ?1      ?2
+[eureka]       /        /           \
+            search      details     book+author module
              /
           employee
 
-Wednesday
-1. register your services into microservice
-2. search service fetch data from employee service
+1. add employee module into weather project
+    gateway -> search -> employee
+        /employees?age=5 => employee
+      a. in search service provide api => search by age (multiple ages in request parameter)   age=1,13,45,2
+         send multiple request to employee service
+            /employees?age=1
+            /employees?age=13
+            /employees?age=45
+            /employees?age=2
+     ribbon + rest template
+2. add book + author module into weather project
+    gateway -> book_author
 
-Thursday
-1. impl endpoint in employee service => retrieve employee by id
-2. in search service, create endpoint to retrieve multiple employees at same time with multi-threading
-    (CompletableFuture)
-3. add swagger library in .. services
+3. add swagger into search service
+4. add common module to book+author module
+5. add hystrix in search service
+6. generate global unique id in gateway
+   add global unique to downstream request header
+   in downstream services, print it
 
-Friday / Weekends
-1. add hystrix + retry in search service
-2. add configuration service in microservice
-3. add security verification into your microservice with spring cloud security
-   gateway -> security
-     |
-   resource(@PreAuthorize , filter / controller , service -> fetch principle / user authentication by using jwt token)
-
+**
+1. centralized spring security service
+2. spring cloud configuration service

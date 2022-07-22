@@ -17,6 +17,7 @@ public class GatewayApplication {
         SpringApplication.run(GatewayApplication.class, args);
     }
 
+    //http://search-service/weather/search
     @Bean
     @LoadBalanced
     public WebClient.Builder getWebClientBuilder() {

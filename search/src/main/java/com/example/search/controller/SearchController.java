@@ -12,6 +12,6 @@ public class SearchController {
     @GetMapping("/weather/search")
     public ResponseEntity<?> getDetails() {
         //TODO
-        return null;
+        return new ResponseEntity<>("this is search service", HttpStatus.OK);
     }
 }
