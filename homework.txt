@@ -1,0 +1,30 @@
+
+                            gateway
+[eureka]       /        /           \
+            search      details     book+author module
+             /
+          employee
+
+1. add employee module into weather project
+    gateway -> search -> employee
+        /employees?age=5 => employee
+      a. in search service provide api => search by age (multiple ages in request parameter)   age=1,13,45,2
+         send multiple request to employee service
+            /employees?age=1
+            /employees?age=13
+            /employees?age=45
+            /employees?age=2
+     ribbon + rest template
+2. add book + author module into weather project
+    gateway -> book_author
+
+3. add swagger into search service
+4. add common module to book+author module
+5. add hystrix in search service
+6. generate global unique id in gateway
+   add global unique to downstream request header
+   in downstream services, print it
+
+**
+1. centralized spring security service
+2. spring cloud configuration service
