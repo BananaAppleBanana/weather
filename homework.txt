@@ -1,3 +1,0 @@
-1. add employee service + book author service into this microservice
-2. use common module in employee service
-deadline is tomorrow morning 10am cdt
