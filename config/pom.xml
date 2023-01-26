@@ -7,26 +7,24 @@
         <artifactId>weather</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>discovery</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>discovery</name>
+    <name>config</name>
     <description>Demo project for Spring Boot</description>
-
+    <properties>
+        <java.version>8</java.version>
+    </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.sun.jersey.contribs</groupId>
-            <artifactId>jersey-apache-client4</artifactId>
-            <version>1.19.1</version>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
+
+
 </project>
