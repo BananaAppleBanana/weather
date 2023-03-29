@@ -1,7 +1,14 @@
 homework:
-1. change weather-details-service name to details-service
-2. change /weather to /search
-3. add university service
-   add provider service
-   into microservice
-   users can send request to gateway, and fetch data from provider / university service
+1. add your 2 rest applications into this project
+2. use config service to load configuration
+3. in search service
+        use CompletableFuture + restTemplate => fetch student info from student service + fetch 3rd party api from demo service
+4. configure Hystrix (circuit) in one service
+5. configure swagger documentation in search service
+6. configure student service in gateway
+
+
+how to run this application
+1. java 8 / java 11
+2. generate key pair + key store, save / configure in config service
+3. start config service first
