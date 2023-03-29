@@ -1,4 +1,4 @@
 [submodule "config-repo"]
 	path = config-repo
 	url = https://github.com/BananaAppleBanana/config-repo.git
-    branch=main
+    branch=master
