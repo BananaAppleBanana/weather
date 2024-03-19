@@ -1,15 +1,25 @@
-homework:
-1. add your 2 rest applications into this project
-2. use config service to load configuration
-3. in search service
-        use CompletableFuture + restTemplate => fetch student info from student service + fetch 3rd party api from demo service
-4. configure Hystrix (circuit) in one service
-5. configure swagger documentation in search service
-6. configure student service in gateway
+1. java 8 / 11
+2. properties folder -> local git repo
+3. change config path
 
+server order
+1. start config service
+2. start eureka service
+3. start gateway service
+4. start other service
 
-
-how to run this application
-1. java 8 / java 11
-2. generate key pair + key store, save / configure in config service
-3. start config service first
+homework
+1. add emp/dept , .. services into spring cloud project
+    modify pom.xml (eureka client + config client)
+    change properties
+    move properties to config server
+    modify gateway config
+    encrypt port
+2. search service ->
+        completable future
+            call emp/dept service
+            call details (/details/port)
+            restTemplate.getForObject("http://details/port",  ..);
+        merge result -> return "general response(code, timestamp, data)" to user
+3. add hystrix to search service
+4. configure swagger on emp/dept service
