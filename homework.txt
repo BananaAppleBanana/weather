@@ -22,3 +22,4 @@ homework
             restTemplate.getForObject("http://details/port",  ..);
         merge result -> return "general response(code, timestamp, data)" to user
 3. add hystrix to search service
+4. create your own keystore -> encrypt properties value
