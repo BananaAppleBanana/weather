@@ -9,17 +9,16 @@ server order
 4. start other service
 
 homework
-1. add emp/dept , .. services into spring cloud project
+1. add previous services into spring cloud project
     modify pom.xml (eureka client + config client)
     change properties
     move properties to config server
     modify gateway config
     encrypt port
-2. search service ->
+2. create search service ->
         completable future
-            call emp/dept service
+            call book/author service
             call details (/details/port)
             restTemplate.getForObject("http://details/port",  ..);
         merge result -> return "general response(code, timestamp, data)" to user
 3. add hystrix to search service
-4. configure swagger on emp/dept service
