@@ -1,12 +1,21 @@
 1. java 8 / 11
 2. properties folder -> local git repo
 3. change config path
+4. change spring cloud config default git branch name to "main"
 
 server order
 1. start config service
 2. start eureka service
 3. start gateway service
 4. start other service
+
+
+group project / homework
+1. each group should create a shared git repository
+2. each member of the group shouldn't work on main branch
+3. for each feature, checkout a feature branch under the main branch.
+4. use pull request and merge when you want to merge feature branch back to main branch
+
 
 homework
 1. add previous services into spring cloud project
@@ -15,11 +24,22 @@ homework
     move properties to config server
     modify gateway config
     encrypt port
-2. create search service ->
+2. search service ->
+        configure ribbon with rest template (@LoadBalanced)
         completable future
             call book/author service
             call details (/details/port)
             restTemplate.getForObject("http://details/port",  ..);
         merge result -> return "general response(code, timestamp, data)" to user
 3. add hystrix to search service
-4. create your own keystore -> encrypt properties value
+4. create your own keystore
+    encrypt properties value(username password of your database connection)
+5. use Prometheus and Grafana to create dashboard of your application
+6. provide swagger / openai api documentation
+7. add splunk log centralization server
+    splunk free trail server
+    splunk universal forwarder
+
+
+deadline is next Monday
+check homeworks from 2 groups
